@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .selector {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 80%;
+            max-width: 1000px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .selectserviceprovider,
+        .selectserviceuser {
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            flex: 1;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .selectserviceprovider:hover,
+        .selectserviceuser:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .selectserviceprovider img,
+        .selectserviceuser img {
+            width: 80px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .selectserviceprovider h1,
+        .selectserviceuser h1 {
+            margin: 20px 0;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .selectserviceprovider p,
+        .selectserviceuser p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .selector {
+                flex-direction: column;
+            }
+
+            .selectserviceprovider,
+            .selectserviceuser {
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function handleServicePro() {
+            window.location.href = 'ServiceProvider.html';
+            console.log('sp');
+            
+        }
+        function handleServiceUser() {
+            window.location.href = 'ServiceUser.html';
+            console.log('su');
+        }
+    </script>
+    <!-- Selector -->
+    <div class="selector" >
+        <div class="selectserviceprovider"onclick="handleServicePro()"> 
+            <div class="imgsprovider"><img src="https://cdn-icons-png.freepik.com/512/2720/2720641.png" alt="Service Provider"></div>
+            <div class="serviceprovidercont">
+                <h1>Service Provider</h1>
+                <p>Are you a skilled professional, ready to showcase your expertise? Join us as a Service Provider and unlock a world of opportunities. Reach a broader audience, expand your client base, and manage your services effortlessly.</p>
+            </div>
+        </div>
+        <div class="selectserviceuser" onclick="handleServiceUser()">
+            <div class="imgsuser"><img src="https://www.freeiconspng.com/uploads/meeting-icon-png-presentation-icon-board-meeting-icon-meeting-icon--4.png" alt="Service User"></div>
+            <div class="serviceusercont">
+                <h1>Service User</h1>
+                <p>Looking for top-notch services to meet your needs? Be it home services, professional assistance, or anything in between, Loco connects you with reliable Service Providers. Join as a Service User, and experience the ease of finding trusted professionals at your fingertips.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

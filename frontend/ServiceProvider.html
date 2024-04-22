@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Provider Details</title>
+    <link rel="stylesheet" href="ServiceProvider.css">
+</head>
+<body>
+   <!-- Include Axios library -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    // Function to perform reverse geocoding using OpenCage API
+    
+</script>
+
+<div class="container">
+    <h1 class="mainheading">Service Provider Details</h1>
+    <form id="provider-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mobilenumber">Mobile Number:</label>
+        <input type="text" id="mobilenumber" name="mobilenumber" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+
+        <label for="profile-picture">Profile Picture:</label>
+        <input type="file" id="profile-picture" name="profile-picture" accept="image/*"><br><br>
+
+        <label for="jobtype">Job Type:</label>
+        <input type="text" id="jobtype" name="jobtype" required><br><br>
+
+        <label for="experience">Experience:</label>
+        <input type="text" id="experience" name="experience" required><br><br>
+
+        <label for="job-description">Job Description:</label><br>
+        <textarea id="job-description" name="job-description" required></textarea><br><br>
+
+        <button type="submit">Add Provider</button>
+    </form>
+</div>
+<div id="results" class="todo-list">
+    <!-- Filtered results will be displayed here -->
+    
+</div>
+<div id="detailsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="provider-username"></h2>
+        <div class="details">
+            <div class="detail-item">
+                <span class="label" id="provider-name"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-email"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-mobile"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-age"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-job-type"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-job-description"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-experience"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-gender"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-address"></span>
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-pincode"></span>
+            </div>
+            <div class="detail-item">
+                <img id="provider-profile-pic" src="" alt="Profile Picture">
+            </div>
+            <div class="detail-item">
+                <span class="label" id="provider-date"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="ServiceProviders.js"></script>
+</body>
+</html>
